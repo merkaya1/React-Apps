@@ -1,0 +1,83 @@
+[
+    {
+        "id":1,
+        "name": "Dark Magician",
+        "type": ["Spellcaster"],
+        "atk": 2500,
+        "def": 2100,
+        "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_421/MTgyMDIyMTEyODIyMzcxNDU5/top-strongest-yugioh-monsters-in-lore.webp"
+
+    },
+    {
+        "id":2,
+        "name": "Blue-Eyes Ultimate Dragon",
+        "type": ["Dragon", "Fusion"],
+        "atk": 4500,
+        "def": 3800,
+        "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_421/MTgyMDIyMTEyODIxNzgxNjM1/top-strongest-yugioh-monsters-in-lore.webp"
+    },
+    {
+        "id":3,
+        "name": "Constellar Sombre",
+        "type": ["Fairy", "Effect"],
+        "atk": 1550,
+        "def": 1600,
+        "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_421/MTgyMDIyMTEyODIyMjQwMzg3/top-strongest-yugioh-monsters-in-lore.webp"
+    },
+    {
+        "id":4,
+        "name": "Evilswarm Kerykeion",
+        "type": ["Spellcaster", "Effect"],
+        "atk": 1600,
+        "def": 1550,
+        "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_421/MTgyMDIyMTEyODIxNjUwNzYw/top-strongest-yugioh-monsters-in-lore.webp"
+    },
+    {
+        "id":5,
+        "name": "El Shaddoll Anoyatyllis",
+        "type": ["Fiend", "Fusion", "Effect"],
+        "atk": 2700,
+        "def": 2000,
+        "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_421/MTgyMDIyMTEyODIyMDQzNzc5/top-strongest-yugioh-monsters-in-lore.webp"
+    },
+    {
+        "id":6,
+        "name": "Zefraath",
+        "type": ["Rock", "Pendulum", "Effect"],
+        "atk": 3450,
+        "def": 2950,
+        "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_421/MTgyMDIyMTEyODIyMTc0ODUx/top-strongest-yugioh-monsters-in-lore.webp"
+    },
+    {
+        "id":7,
+        "name": "Tierra",
+        "type": [ "Fiend", "Effect"],
+        "atk": 3400,
+        "def": 3600,
+        "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_421/MTgyMDIyMTEyODIyMzA1OTIz/top-strongest-yugioh-monsters-in-lore.webp"
+    },
+    {
+        "id":8,
+        "name": "Sophia",
+        "type": [ "Fairy", "Effect"],
+        "atk": 3600,
+        "def": 3400,
+        "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_421/MTgyMDIyMTEyODIyMTA5MzE1/top-strongest-yugioh-monsters-in-lore.webp"
+    },
+    {
+        "id":9,
+        "name": "The Winged Dragon Of Ra",
+        "type": [ "Divine-Beast", "Effect"],
+        "atk": "---",
+        "def": "---",
+        "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_421/MTgyMDIyMTEyODIxOTc4MjQz/top-strongest-yugioh-monsters-in-lore.webp"
+    },
+    {
+        "id":10,
+        "name": "Exodia",
+        "type": [ "Spellcaster"],
+        "atk": "---",
+        "def": "---",
+        "image": "https://ae01.alicdn.com/kf/H83398d1ae42a4728bb36028d15be41881/Yu-gi-oh-DIY-Yugioh-kartlar-koyu-sihirbaz-Exodia-Anime-tarz-oyun-toplama-kartlar-oyuncaklar.jpg_Q90.jpg_.webp"
+    }
+]

@@ -1,0 +1,35 @@
+.card-list{
+    padding: 0 5%;
+}
+.card-list-title{
+    margin: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.card-list-container{
+    max-width: 1200px;
+    background-color: bisque;
+    min-height: 50vh;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border-radius: 3rem;
+    opacity: 0.7;
+   
+}
+
+.card-list-container h2 {
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.cardlist-card{
+    max-width: 300px;
+    margin: 1rem 2rem;
+    
+}
+
+.card-list-container .card-container {
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body{
+  background-image: url(https://preview.redd.it/wit9m1cwuxq71.jpg?width=960&crop=smart&auto=webp&s=5a2faf522f0476a8c969b57ae344be6e795f63c7);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  text-align:  center;
+  overflow-x: hidden;
+}
+
+.app-title{
+  color: rgb(244, 201, 72);
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 5rem;
+  font-family: 'Dancing Script', cursive;
+  text-transform: uppercase;
+  text-shadow: 5px 2px 4px;
+}
