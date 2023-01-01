@@ -13,6 +13,6 @@ export const reducer = (state=initial_state, action) => {
             return {...state, basket: [...state.basket, action.payload]}
 
             default:
-                return state
+                return state 
     }
 }
