@@ -9,8 +9,8 @@ const Products = (props) => {
   return (
     <div className='product'>
         <h2>
-            <span>Alınacaklar Listem</span>
-            <Link to='/basket'>Faturam</Link>
+            <span>Ürünler</span>
+            <Link to='/basket'>Sepetim</Link>
         </h2>
        <div className='product-container'>
        {
@@ -22,8 +22,9 @@ const Products = (props) => {
                         <p>{product.name}</p>
                     </div>
                     <div className='card-bottom'>
+                        <button onClick={() => props.addBasket(product)}>Sepete Ekle</button>
                         <span className='price'>{product.price} &#8378;</span>
-                        <button>Sepete Ekle</button>
+                        
                     </div>
                 </div>
             ))
@@ -33,10 +34,10 @@ const Products = (props) => {
   )
 }
 
-const mapStateProps = (state) => {
+const mapStateToProps = (state) => {
     return {
         productList : state.productList,
     }
 }
 
-export default connect(mapStateProps)(Products)
+export default connect(mapStateToProps, {addBasket})(Products)
