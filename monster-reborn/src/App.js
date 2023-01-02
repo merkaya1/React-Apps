@@ -6,27 +6,17 @@ import Search from './components/Search/Search';
 import data from './monster.json';
 
 function App() {
-  const [monsters, setMonsters] = useState([])
+  const [monsters, setMonsters] = useState(data)
   const [search, setSearch] = useState("");
-  // const [filteredMonster, setFilteredMonster] = useState([])
-  useEffect(() => {
-    // fetch(data)
-    // .then(res => res.json())
-    // .then(data => setMonster(data))
-    setMonsters(data)
-    // setFilteredMonster(data.filter(item => item.name.toLowerCase().includes(search)))
-  },[])
 
 
-     /* sorulacak */
-  // useEffect(() => {
-  //   setFilteredMonster(data.filter(item => item.name.toLowerCase().includes(search)))
-  // },[])
+
+    
 
 
 
   
-  // console.log(monsters)
+  console.log(monsters)
   // console.log("filterenMons", filteredMonster);
 
   const onSearchChange = (e) => {
