@@ -94,9 +94,7 @@ body{
   transform: translateX(2rem);
   font-weight: 600;
 }
-.card-bottom button:active ~ .price{
-  transform: translateY(-100px);
-}
+
 
 .card-bottom .price{
   letter-spacing: 0.7px;

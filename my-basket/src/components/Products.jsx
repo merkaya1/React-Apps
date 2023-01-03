@@ -2,10 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom' 
 import { connect } from 'react-redux'
 import { addBasket } from '../redux/action/index.action'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Products = (props) => {
-
-    console.log(props.productList);
+    const notify = ((filterTradeMark) => {
+       return props.productList.filter(product => {
+         if(product.id === filterTradeMark) {
+            return toast(`${product.trademark} Marka Ayakkabı Sepete Eklendi`)
+        }
+       })
+    })
+   
+    // console.log(props.productList);
   return (
     <div className='product'>
         <h2>
@@ -22,9 +31,9 @@ const Products = (props) => {
                         <p>{product.name}</p>
                     </div>
                     <div className='card-bottom'>
-                        <button onClick={() => props.addBasket(product)}>Sepete Ekle</button>
+                        <button onClick={() => props.addBasket(product) ? notify(product.id) : null}>Sepete Ekle</button>
                         <span className='price'>{product.price} &#8378;</span>
-                        
+                        <ToastContainer />
                     </div>
                 </div>
             ))
