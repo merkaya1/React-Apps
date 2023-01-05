@@ -8,9 +8,13 @@ const initial_state = {
 }
 
 export const reducer = (state=initial_state, action) => {
+   
     switch(action.type) {
         case "ADD_BASKET":
-            return {...state, basket: [...state.basket, action.payload]}
+            console.log(action.payload)
+            
+            console.log(state.basket)
+            return {...state, basket: state.basket.find(cartItem => cartItem.id === action.payload.id)? state.basket.map(cartItem => cartItem.id === action.payload.id ?{ ...cartItem, count: cartItem.count +1} : cartItem) : [...state.basket, {...action.payload, count: 1}]}
 
             default:
                 return state 
