@@ -11,6 +11,23 @@ import 'react-toastify/dist/ReactToastify.css';
 const CardContainer = styled.div`
   color: #fff;
   margin: 1rem auto;
+  .total{
+    max-width: 50%;
+    margin: 1rem auto;
+    text-align:center;
+    border: 3px solid #A78320;
+    h4{
+      padding: 0.8rem 2rem;
+      background-color: #A78320;
+      font-size: 1.8rem;
+      color: #181717;
+    }
+    p{
+      padding: 1.5rem 0;
+      font-size:1.5rem;
+      color: #A78320;
+    }
+  }
   h2{
     display:flex;
     justify-content:space-evenly;
@@ -74,8 +91,9 @@ const CardContainer = styled.div`
       margin-bottom:1rem;
       text-decoration:underline;
       }
-      div{
-       
+      .amount{
+        display: flex;
+        gap: 5rem;
         span{
         font-size:20px;
         font-weight:600;
@@ -102,7 +120,13 @@ const CardContainer = styled.div`
 
 const Card = () => {
   const context = useContext(BooksContext)
-
+  console.log('cart', context.state.cart)
+  let amount = context.state.cart.map(book => {
+   return {count:book.count, total:book.price}
+  })
+  console.log("amount", amount);
+  let total = amount.map(item => Number((item.count * item.total).toFixed(2)))
+  console.log('total',typeof total, total)
   const notify = ((basketBook) => {
     return context.state.bookList.filter(book => {
       if(book.id === basketBook.id && basketBook.name.includes('Yüzük')) {
@@ -144,6 +168,13 @@ const Card = () => {
           <img className='ring' src={Kiymetlim} alt="" />
           <span>Sepetim</span>
         </h2>
+
+        <div className='total'>
+          <h4>
+            Total Amount 
+          </h4>
+          <p>{total.reduce((a,b) => a+b , 0)} &#8378;</p>
+        </div>
         {
           context.state.cart.map((book, index) => {
            
@@ -155,8 +186,9 @@ const Card = () => {
                 <h4 >{book.name}</h4>
                 <p>Type : {book.type}</p>
                 <p>Author : {book.author} </p>
-                <div>
+                <div className='amount'>
                    <span className='price'>Price : {book.price} &#8378;</span>
+                   <span>{`Total Amount : ${(book.price * book.count).toFixed(2)} ` } &#8378; </span>
                    <span className='count'>X{book.count}</span>
                 </div>
                 <div className='btn-items'>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { BooksContext} from '../App'
@@ -12,6 +12,33 @@ import eyeOfSauron from '../assets/eye-of-sauron.png';
 const ProductContainer = styled.div`
   color: #fff;
   margin: 1rem auto;
+  .input{
+    background-color:transparent;
+    width: 50%;
+    margin: 2rem auto;
+    
+    
+    input{
+      width:100%;
+      padding: 0.5rem ;
+      outline:none;
+      text-align: center;
+      font-size: 16px;
+      font-family: 'Roboto Mono',monospace;
+      font-weight: 600;
+      border:none;
+      border-radius:0.4rem;
+      -webkit-box-shadow: 0px 5px 10px 7px rgba(246,247,242,1);
+-moz-box-shadow: 0px 5px 10px 7px rgba(246,247,242,1);
+box-shadow: 0px 5px 10px 7px rgba(246,247,242,1);
+      &:focus{
+        -webkit-box-shadow: 0px 5px 10px 7px rgba(167, 131, 32, 0.7);
+-moz-box-shadow: 0px 5px 10px 7px rgba(167, 131, 32, 0.7);
+box-shadow: 0px 5px 10px 7px rgba(167, 131, 32, 0.7);
+border-radius:2rem;
+      }
+    }
+  }
   
   h2{
     display:flex;
@@ -85,8 +112,11 @@ const ProductContainer = styled.div`
 
 const Product = (props) => {
 
+  const [search, setSearch] = useState('')
+
 const context = useContext(BooksContext)
 console.log(context)
+
 
 const notify = ((basketBook) => {
   return context.state.bookList.filter(book => {
@@ -118,6 +148,14 @@ const notify = ((basketBook) => {
   })
 })
 
+const onSearchChange = (e) => {
+  const searchFieldString = e.target.value.toLowerCase()
+  setSearch(searchFieldString)
+  console.log(searchFieldString)
+}
+
+const filteredBook = context.state.bookList.filter(item => item.name.toLowerCase().includes(search))
+console.log('fil', filteredBook);
   return (
    
     <div className='product'>
@@ -128,8 +166,11 @@ const notify = ((basketBook) => {
           <img className='ring' src={Kiymetlim} alt="" />
           <Link to="/card">Sepetim</Link>
         </h2>
+        <div className='input'>
+          <input type="text" placeholder='Search Book' onChange={onSearchChange}/>
+        </div>
         {
-          context.state.bookList.map((book, index) => (
+          filteredBook.map((book, index) => (
             <div className="book" key={index}>
               <img src={book.image} alt={book.name} />
               <div className='book-info'>
