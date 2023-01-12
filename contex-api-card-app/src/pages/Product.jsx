@@ -112,7 +112,7 @@ border-radius:2rem;
 
 const Product = (props) => {
 
-  const [search, setSearch] = useState('')
+const [search, setSearch] = useState('')
 
 const context = useContext(BooksContext)
 console.log(context)
@@ -153,6 +153,11 @@ const onSearchChange = (e) => {
   setSearch(searchFieldString)
   console.log(searchFieldString)
 }
+const handleClick = (book) => {
+  context.addToCart(book)
+  notify(book) 
+}
+
 
 const filteredBook = context.state.bookList.filter(item => item.name.toLowerCase().includes(search))
 console.log('fil', filteredBook);
@@ -180,7 +185,7 @@ console.log('fil', filteredBook);
                 <span className='price'>Price : {book.price} &#8378;</span>
                 <div>
                   {/* Bu Bölümü Sormam Lazım */}
-                  <Button text = "Sepete Ekle" onClick = {() => notify(book) && context.addToCart(book)  }/>
+                  <Button text = "Sepete Ekle" onClick = {() => handleClick(book)  }/>
                   
                   
                   <ToastContainer />
