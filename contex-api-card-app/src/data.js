@@ -19,7 +19,7 @@ export const DATA = [
     },
     {
       id: 3,
-      name: "Yüzüklerin Efendisi - İki Kule",
+      name: "Yüzüklerin Efendisi - Kralın Dönüşü",
       author: "J. R. R. Tolkien",
       type: "İngiliz Edebiyatı",
       price: 89.60,
@@ -55,7 +55,7 @@ export const DATA = [
     },
     {
         id: 7,
-        name: "Harry Potter",
+        name: "Harry Potter - Azkaban Tutsağı",
         author: "J. K. Rowling",
         type: "Roman",
         price: 45,

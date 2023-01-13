@@ -2,8 +2,9 @@ import { createContext, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { DATA } from './data';
-import Product from './pages/Product';
-import Card from './pages/Card';
+import Product from './pages/Product/Product';
+import Card from './pages/Card/Card';
+import Header from './layout/Header/Header';
 
 export const BooksContext = createContext();
 
@@ -49,7 +50,7 @@ function App() {
     <BooksContext.Provider value={{state:state, addToCart, increase, decrease, removeFromCart}}>
       
        <BrowserRouter>
-        
+        <Header/>
         <Routes>
           <Route path='/' element = {<Product/>}/>
           <Route path='/card' element = {<Card/>}/>

@@ -1,7 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
 
-const Btn = styled.button`
+export const Btn = styled.button`
     padding: 0.5rem 1rem;
     border-radius:10px;
     border:none;
@@ -17,11 +16,3 @@ const Btn = styled.button`
     }
 
 `;
-
-const Button = ({text, onClick}) => {
-  return (
-    <Btn onClick={onClick}>{text}</Btn>
-  )
-}
-
-export default Button
