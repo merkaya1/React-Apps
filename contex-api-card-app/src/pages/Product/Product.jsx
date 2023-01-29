@@ -18,26 +18,14 @@ const Product = (props) => {
     return context.state.bookList.filter((book) => {
       if (book.id === basketBook.id && basketBook.name.includes("Yüzük")) {
         return toast(`Kral Adamsın Brooo Bravo !!!!`, {
-          className: "toast",
-          position: "top-right",
           autoClose: 4000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
           theme: "dark",
         });
       } else if (book.id === basketBook.id) {
         return toast.success(`${book.name}  Sepete Eklendi`, {
-          position: "top-right",
+          
           autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
+          
         });
       }
     });
@@ -61,8 +49,8 @@ const Product = (props) => {
   return (
     <ProductContainer>
       <SearchInput onSearchChange={onSearchChange} />
-      {filteredBook.map((book, index) => (
-        <ProductBook book={book} index={index} handleClick={handleClick} />
+      {filteredBook.map((book) => (
+        <ProductBook book={book} key={book.id} handleClick={handleClick} />
       ))}
     </ProductContainer>
   );

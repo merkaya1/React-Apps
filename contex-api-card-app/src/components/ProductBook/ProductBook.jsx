@@ -4,12 +4,12 @@ import { ToastContainer } from "react-toastify";
 import Button from "../../components/Button/Button";
 import { ProductBookStyled } from "./ProductBook.styled";
 
-const ProductBook = ({ book, index, handleClick }) => {
+const ProductBook = ({ book,  handleClick }) => {
   // let location = useLocation();
 
   return (
     <>
-      <ProductBookStyled key={index}>
+      <ProductBookStyled>
         <img src={book.image} alt={book.name} />
         <div className="book-info">
           <h4>{book.name}</h4>
@@ -18,7 +18,7 @@ const ProductBook = ({ book, index, handleClick }) => {
           <span className="price">Price : {book.price} &#8378;</span>
           <div>
             <Button text="Sepete Ekle" onClick={() => handleClick(book)} />
-            <ToastContainer />
+          
           </div>
         </div>
       </ProductBookStyled>

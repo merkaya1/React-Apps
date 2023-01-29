@@ -5,6 +5,7 @@ import { DATA } from './data';
 import Product from './pages/Product/Product';
 import Card from './pages/Card/Card';
 import Header from './layout/Header/Header';
+import { ToastContainer } from 'react-toastify';
 
 export const BooksContext = createContext();
 
@@ -57,6 +58,17 @@ function App() {
         </Routes>
    
       </BrowserRouter>
+      <ToastContainer
+             position="top-right"
+             hideProgressBar={false}
+             newestOnTop={false}
+             closeOnClick
+             rtl={false}
+             pauseOnFocusLoss
+             draggable
+             pauseOnHover
+             theme="light"
+            />
     </BooksContext.Provider>
    
   );

@@ -12,35 +12,23 @@ const Card = () => {
 
    const notify = (basketBook) => {
       return context.state.bookList.filter((book) => {
+        
         if (book.id === basketBook.id && basketBook.name.includes("Yüzük")) {
-          return toast(`Senin Adına Üzüldüm Kardeşim`, {
-            className: "toast",
-            position: "top-right",
-            autoClose: 4000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
+          return toast(`Senin Adına Üzüldüm Kardeşim`,
+         { autoClose: 3000,
+           theme:"dark"} );
         } else if (book.id === basketBook.id) {
           return toast.success(`${book.name}  Sepetten Çıkarıldı`, {
-            position: "top-right",
+           
             autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
+            
           });
-        }
+        } 
       });
     };
 
   console.log("cart", context.state.cart);
-
+  
   let amount = context.state.cart.map((book) => {
     return { count: book.count, total: book.price };
   });
@@ -53,8 +41,10 @@ const Card = () => {
 
   
   const handleRemove = (book) => {
+    console.log("121212",book);
     notify(book);
     context.removeFromCart(book.id);
+    
     
   };
 
@@ -65,8 +55,8 @@ const Card = () => {
      
       <TotalAmount total={total} />
 
-      {context.state.cart.map((book, index) => {
-       return <CardBook book={book} index={index} handleRemove={handleRemove}  context={context}/>;
+      {context.state.cart.map((book) => {
+       return <CardBook book={book} key={book.id} handleRemove={handleRemove}  context={context}/>;
       })}
     </CardContainer>
   );
