@@ -12,7 +12,7 @@ const Hero = () => {
     justifyContent: 'center',
     gap: theme.spacing(5),
     marginTop: theme.spacing(3),
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
       alignItems: 'center',
       textAlign: 'center'
@@ -45,6 +45,10 @@ const Hero = () => {
               one simple search!
             </Typography>
             <CustomButton backgroundColor='#0f1b4c' color='#fff' buttonText='More About Us' heroBtn={true} />
+          </Box>
+
+          <Box sx={{ flex: '1.25' }}>
+            <img src={heroImg} alt='heroImg' style={{ maxWidth: '100%', marginBottom: '2rem' }} />
           </Box>
         </CustomBox>
       </Container>
