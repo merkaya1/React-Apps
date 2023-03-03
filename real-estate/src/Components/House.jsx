@@ -6,6 +6,9 @@ import spaceIcon from '../media/spaceIcon.png';
 
 const House = ({ img, price, address, bedrooms, bathrooms, space }) => {
   const HouseBox = styled(Box)(({ theme }) => ({
+    borderTopLeftRadius: '15px',
+    borderTopLRightRadius: '15px',
+
     maxWidth: 350,
     // width: '100%',
     backgroundColor: '#fff',

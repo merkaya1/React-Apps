@@ -16,6 +16,8 @@ const Details = () => {
 
   const ImgContainer = styled(Box)(({ theme }) => ({
     width: '100%',
+
+    overflow: 'hidden',
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       alignItems: 'center',
@@ -66,7 +68,7 @@ const Details = () => {
       <Container>
         <CustomBox>
           <ImgContainer>
-            <img src={houseCard} alt='house' />
+            <img src={houseCard} alt='house' style={{ objectFit: 'cover', width: '100%' }} />
           </ImgContainer>
 
           <Box>
