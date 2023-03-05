@@ -10,8 +10,9 @@ const CustomButton = ({ backgroundColor, buttonText, color, heroBtn, guideBtn, g
     padding: '0.5rem 1.25rem',
     borderRadius: '7px',
     textTransform: 'none',
-    display: 'block',
+    // display: 'block',
     border: '2px solid transparent',
+    overflow: 'hidden',
     '&:hover': {
       backgroundColor: color,
       color: backgroundColor,

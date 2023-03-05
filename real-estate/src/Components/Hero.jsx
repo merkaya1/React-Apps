@@ -30,11 +30,11 @@ const Hero = () => {
   }));
 
   return (
-    <Box sx={{ backgroundColor: '#e6f0ff', minHeight: '80vh' }}>
+    <Box className='hero' sx={{ backgroundColor: '#e6f0ff', minHeight: '80vh' }}>
       <Container>
         <Navbar />
 
-        <CustomBox>
+        <CustomBox className='banner-hero'>
           <Box sx={{ flex: '1' }}>
             <Typography variant='body2' sx={{ fontSize: '18px', color: '#687690', fontWeight: '500', mt: 10, mb: 4 }}>
               Welcome to Erkaya Real Estate

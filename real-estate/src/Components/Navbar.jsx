@@ -6,6 +6,7 @@ import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
 import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import HomeIcon from '@mui/icons-material/Home';
+import AccountBoxSharpIcon from '@mui/icons-material/AccountBoxSharp';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import logoImg from '../media/logo.png';
 import { Container } from '@mui/system';
@@ -28,7 +29,7 @@ export const Navbar = () => {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 258 }}
       role='presentation'
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}>
@@ -37,7 +38,7 @@ export const Navbar = () => {
           <ListItem key={index} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index === 0 && <HomeIcon />}
+                {index === 0 && <AccountBoxSharpIcon />}
                 {index === 1 && <FeaturedPlayListIcon />}
                 {index === 2 && <MiscellaneousServicesIcon />}
                 {index === 3 && <ListAltIcon />}
@@ -57,8 +58,8 @@ export const Navbar = () => {
     fontWeight: 'bold',
     cursor: 'pointer',
     '&:hover': {
-      color: '#fff'
-      // opacity: '0.6'
+      // color: '#fff'
+      opacity: '0.6'
     }
   }));
 
@@ -99,7 +100,7 @@ export const Navbar = () => {
   }));
 
   return (
-    <NavbarContainer>
+    <NavbarContainer className='navbar'>
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2rem' }}>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <CustomMenuIcon onClick={toggleDrawer('left', true)} />
