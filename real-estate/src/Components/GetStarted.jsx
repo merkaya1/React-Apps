@@ -32,7 +32,7 @@ const GetStarted = () => {
   }));
 
   return (
-    <CustomBox>
+    <CustomBox className='GetStarted'>
       <CustomContainer>
         <Box>
           <Typography sx={{ fontSize: '35px', color: 'white', fontWeight: '700' }}>Featured Properties</Typography>

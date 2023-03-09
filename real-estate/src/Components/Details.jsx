@@ -19,9 +19,7 @@ const Details = () => {
 
     overflow: 'hidden',
     [theme.breakpoints.down('md')]: {
-      display: 'flex',
-      alignItems: 'center',
-      flexDirection: 'column'
+      width: '80%'
     }
   }));
 
@@ -64,7 +62,7 @@ const Details = () => {
   }));
 
   return (
-    <Box>
+    <Box className='Details'>
       <Container>
         <CustomBox>
           <ImgContainer>
@@ -74,6 +72,7 @@ const Details = () => {
           <Box>
             <Divider />
             <Typography
+              variant='h3'
               sx={{
                 fontSize: '35px',
                 color: '#000339',

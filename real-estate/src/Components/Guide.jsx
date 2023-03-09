@@ -42,10 +42,12 @@ const Guide = () => {
   }));
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-      <div style={{ width: '5%', height: '5px', background: '#000339', margin: '0 auto' }}></div>
+    <Box
+      className='guide'
+      sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ width: '5%', height: '5px', background: '#000339' }}></div>
 
-      <Typography variant='h3' sx={{ fontSize: '35px', color: '000339', fontWeight: 'bold', my: 3 }}>
+      <Typography variant='h3' sx={{ fontSize: '35px', color: '#000339', fontWeight: 'bold', my: 3 }}>
         How it Works?
       </Typography>
 
@@ -61,7 +63,7 @@ const Guide = () => {
           <Typography variant='body2' sx={{ fontWeight: '500', fontSize: '20px', color: '#383c45', my: 1 }}>
             Buying Guides
           </Typography>
-          <Box sx={{ cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box sx={{ cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem' }}>
             <Typography variant='body2' sx={{ fontWeight: 'bold', fontSize: '14px', color: '#0689ff' }}>
               How to buy
             </Typography>
@@ -74,7 +76,7 @@ const Guide = () => {
           <Typography variant='body2' sx={{ fontWeight: '500', fontSize: '20px', color: '#383c45', my: 1 }}>
             Rentin Guides
           </Typography>
-          <Box sx={{ cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box sx={{ cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem' }}>
             <Typography variant='body2' sx={{ fontWeight: 'bold', fontSize: '14px', color: '#0689ff' }}>
               How to rent
             </Typography>
@@ -87,7 +89,7 @@ const Guide = () => {
           <Typography variant='body2' sx={{ fontWeight: '500', fontSize: '20px', color: '#383c45', my: 1 }}>
             Selling Guides
           </Typography>
-          <Box sx={{ cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box sx={{ cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem' }}>
             <Typography variant='body2' sx={{ fontWeight: 'bold', fontSize: '14px', color: '#0689ff' }}>
               How to sell
             </Typography>

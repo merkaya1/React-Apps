@@ -5,13 +5,15 @@ import bathroomsIcon from '../media/bathroomsIcon.png';
 import spaceIcon from '../media/spaceIcon.png';
 
 const House = ({ img, price, address, bedrooms, bathrooms, space }) => {
+  console.log('space', space);
+
   const HouseBox = styled(Box)(({ theme }) => ({
     borderTopLeftRadius: '15px',
     borderTopLRightRadius: '15px',
 
     maxWidth: 350,
     // width: '100%',
-    backgroundColor: '#fff',
+    backgroundColor: '#ccc',
     margin: theme.spacing(0, 2, 0, 2),
     [theme.breakpoints.down('md')]: {
       margin: theme.spacing(2, 0, 2, 0)
@@ -25,13 +27,14 @@ const House = ({ img, price, address, bedrooms, bathrooms, space }) => {
   }));
 
   const ImgContainer = styled(Box)(() => ({
-    width: '100%'
+    // width: '100%'
+    display: 'flex'
   }));
 
   return (
     <HouseBox>
       <ImgContainer>
-        <img src={img} alt='houseFoto' style={{ maxWidth: '100%' }} />
+        <img src={img} alt='houseFoto' style={{ width: '100%' }} />
       </ImgContainer>
 
       <Box sx={{ p: 2 }}>
@@ -58,7 +61,7 @@ const House = ({ img, price, address, bedrooms, bathrooms, space }) => {
           </InfoBox>
 
           <InfoBox>
-            <img src={bedroomsIcon} alt='bedrooms' />
+            <img src={spaceIcon} alt='bedrooms' />
             <Typography variant='body2' sx={{ mt: 1 }}>
               {space}
             </Typography>

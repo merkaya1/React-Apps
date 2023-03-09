@@ -23,7 +23,7 @@ const Companies = () => {
   }));
 
   return (
-    <Box sx={{ mt: 10 }}>
+    <Box className='companies' sx={{ mt: 10 }}>
       <CustomContainer>
         <CustomBox>
           <img src={logoImg} alt='logo' style={{ maxWidth: '100%' }} />
@@ -40,8 +40,8 @@ const Companies = () => {
         </Box>
       </CustomContainer>
 
-      <Container sx={{ display: 'flex', flexDirection: 'column' }}>
-        <img src={logosImg} alt='logos' />
+      <Container sx={{ display: 'flex' }}>
+        <img src={logosImg} alt='logos' style={{ width: '100%' }} />
       </Container>
     </Box>
   );
