@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Mustang 1965",
+    "price": 25000,
+    "imgUrl": "/images/mustang.jpg"
+  },
+  {
+    "id": 2,
+    "name": "BMW",
+    "price": 20000,
+    "imgUrl": "/images/bmw.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Book",
+    "price": 15.5,
+    "imgUrl": "/images/book.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Erkaya's Headphone",
+    "price": 500,
+    "imgUrl": "/images/headphone.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Strong PC",
+    "price": 2000,
+    "imgUrl": "/images/pc.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Orange",
+    "price": 3,
+    "imgUrl": "/images/orange.jpg"
+  }
+]
