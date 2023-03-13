@@ -17,8 +17,7 @@ const todoSlice = createSlice({
       state.push(newTodo);
     },
     removeTodo: (state, action) => {
-      const removeItem = state.filter((todo) => todo.id !== action.payload.id);
-      return removeItem;
+      return state.filter((todo) => todo.id !== action.payload.id);
     },
     completedTodo: (state, action) => {
       const index: number = state.findIndex((todo) => todo.id === action.payload.id);

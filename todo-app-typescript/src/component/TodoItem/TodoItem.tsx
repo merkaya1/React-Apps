@@ -12,7 +12,7 @@ type TodoItemProps = {
   completed: boolean;
 };
 
-const TodoItem = ({ todo, id, completed }: TodoItemProps) => {
+const TodoItem: React.FC<TodoItemProps> = ({ todo, id, completed }) => {
   const dispatch = useDispatch();
 
   const success: () => void = () => {

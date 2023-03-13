@@ -9,6 +9,7 @@ interface todo {
 
 const TotalCompletedTodos = () => {
   const completedTodos = useSelector((state: any) => state.todos.filter((todo: todo) => todo.completed === true));
+  console.log(completedTodos);
   return (
     <div className='total'>
       <h2>Total Completed Items: {completedTodos.length}</h2>
