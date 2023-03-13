@@ -1,0 +1,18 @@
+.input {
+  appearance: none;
+  border: 2px solid transparent;
+  outline: 0;
+  border-radius: 10px;
+  transition: all 0.4s;
+  padding: 0 10px;
+  width: 100%;
+  background-color: #ccc;
+  color: #000;
+  min-height: 35px;
+  &:focus {
+    border-color: #25ebeb;
+    box-shadow: 0 0 15px #25ebeb;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+  }
+}
