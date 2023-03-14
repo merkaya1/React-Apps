@@ -1,0 +1,9 @@
+.movie-list {
+  background-color: #002f3b;
+  // #004f5c
+  padding: 2rem;
+
+  @media screen and (max-width: 572px) {
+    padding: 1rem;
+  }
+}

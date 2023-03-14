@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap');
+
+$movie-add-font: 'Roboto Mono', monospace;
+
+@mixin d-flex($just, $align) {
+  display: flex;
+  justify-content: $just;
+  align-items: $align;
+}
+
+@mixin grid() {
+  display: grid;
+  place-content: center;
+}

@@ -1,0 +1,25 @@
+@import '../../base.scss';
+
+.btn {
+  padding: 7px 15px;
+  font-weight: 500;
+  font-family: $movie-add-font;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  &.w-100 {
+    width: 100%;
+  }
+  &.add {
+    background-color: #afafaf;
+    &:hover {
+      box-shadow: 0 8px 6px -6px black;
+    }
+  }
+  &.edit {
+    background-color: #e6da34;
+  }
+  &.delete {
+    background-color: #e62d14;
+  }
+}
