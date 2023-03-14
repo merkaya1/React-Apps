@@ -1,7 +1,27 @@
+@import '../../base.scss';
+
 .movie-list {
   background-color: #002f3b;
-  // #004f5c
+
   padding: 2rem;
+  margin-top: 2rem;
+
+  &-title {
+    color: #8db4dc;
+    font-family: $movie-list-font;
+    text-shadow: 0 2px 4px #07c6ff;
+  }
+
+  ul {
+    @include d-flex(flex-start, flex-start);
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    li {
+      flex: 1;
+    }
+  }
 
   @media screen and (max-width: 572px) {
     padding: 1rem;

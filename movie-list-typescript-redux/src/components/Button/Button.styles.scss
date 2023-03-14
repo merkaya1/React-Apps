@@ -17,9 +17,24 @@
     }
   }
   &.edit {
-    background-color: #e6da34;
+    background-color: transparent;
+
+    border-radius: 1rem;
+    color: #fff;
+    &:hover {
+      background-color: #ffcb36;
+      color: #000;
+      box-shadow: 0 0 10px 5px #ffcb36;
+    }
   }
   &.delete {
-    background-color: #e62d14;
+    background-color: transparent;
+    border-radius: 1rem;
+    color: #fff;
+    &:hover {
+      background-color: #f06865;
+      color: #000;
+      box-shadow: 0 0 10px 5px #f06865;
+    }
   }
 }

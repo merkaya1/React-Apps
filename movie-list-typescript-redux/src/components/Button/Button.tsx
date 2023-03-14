@@ -5,11 +5,11 @@ import './Button.styles.scss';
 interface ButtonProps {
   text: string;
   width?: string;
-  type: string;
+  bg: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, width, type }) => {
-  return <button className={`btn ${width} ${type}`}>{text}</button>;
+const Button: React.FC<ButtonProps> = ({ text, width, bg }) => {
+  return <button className={`btn ${width} ${bg}`}>{text}</button>;
 };
 
 export default Button;

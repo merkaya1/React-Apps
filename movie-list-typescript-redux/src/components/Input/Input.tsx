@@ -7,13 +7,16 @@ interface InputProps {
   name: string;
   placeholder?: string;
   text: string;
+  register: any;
+  error: any;
 }
 
-const Input: React.FC<InputProps> = ({ type, id, name, placeholder, text }) => {
+const Input: React.FC<InputProps> = ({ type, id, name, placeholder, text, register, error }) => {
   return (
     <label htmlFor={id}>
       {text}
-      <input type={type} name={name} id={id} placeholder={placeholder} />
+      <input {...register(`${name}`)} type={type} name={name} id={id} placeholder={placeholder} required />
+      {/* {error && <span style={{ color: 'red' }}>Boş veya eksik bilgi girdiniz</span>} */}
     </label>
   );
 };
