@@ -2,16 +2,18 @@
 
 .movie-item {
   color: #fff;
-  min-width: 175px;
-  max-width: 225px;
+
+  // max-width: 225px;
   background-color: #004f5c;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
   overflow: hidden;
-
+  width: 100%;
+  max-width: 300px;
+  min-width: 250px;
   img {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
     transition: all 0.3s;
     &:hover {
@@ -25,6 +27,7 @@
     &-title {
       margin-bottom: 10px;
       font-weight: 400;
+      min-height: 50px;
     }
 
     &-directory {
@@ -41,6 +44,7 @@
   &-buttons {
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
   }
 }

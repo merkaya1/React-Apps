@@ -1,23 +1,13 @@
 import React, { useEffect } from 'react';
 import MovieItem from '../MovieItem/MovieItem';
 import './MovieList.styles.scss';
-import movieData from '../../data.json';
-import { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../../redux/hook';
 
-interface MovieProps {
-  title: string;
-  director: string;
-  year: string;
-  bannerUrl: string;
-  id: number;
-}
-
 const MovieList: React.FC = () => {
-  // const [movies, setMovies] = useState<MovieProps[]>(movieData);
-
   const movies = useAppSelector((state) => state.movies);
   console.log(movies);
+
+  const dispatch = useAppDispatch();
 
   return (
     <div className='movie-list'>
@@ -26,11 +16,13 @@ const MovieList: React.FC = () => {
         {movies.map((item, index) => (
           <li key={index}>
             <MovieItem
-              id={item.id}
-              title={item.title}
-              director={item.director}
-              year={item.year}
-              bannerUrl={item.bannerUrl}
+              movie={item}
+              // title={item.title}
+              // director={item.director}
+              // id={item.id}
+              // year={item.year}
+              // bannerUrl={item.bannerUrl}
+              // edit={item.edit}
             />
           </li>
         ))}

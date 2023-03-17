@@ -9,7 +9,9 @@
   list-style: none;
   text-decoration: none;
 }
-
+html {
+  position: relative;
+}
 body {
   background-color: black;
 }
