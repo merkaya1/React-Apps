@@ -27,9 +27,11 @@ interface Movie {
 
 interface MovieItemProps {
   movie: Movie;
+  setDataMovie: React.Dispatch<React.SetStateAction<Movie>>;
+  dataMovie: Movie;
 }
 
-const ModalEdit = ({ movie }: MovieItemProps) => {
+const ModalEdit = ({ movie, setDataMovie, dataMovie }: MovieItemProps) => {
   const dispatch = useAppDispatch();
 
   const notify = (id: string, title: string) =>
@@ -50,7 +52,16 @@ const ModalEdit = ({ movie }: MovieItemProps) => {
     handleSubmit,
     reset,
     formState: { errors }
-  } = useForm<Inputs>();
+  } = useForm<Inputs>({
+    defaultValues: {
+      id: movie.id,
+      title: movie.title,
+      director: movie.director,
+      year: movie.year,
+      bannerUrl: movie.bannerUrl,
+      edit: movie.edit
+    }
+  });
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data);
@@ -66,7 +77,6 @@ const ModalEdit = ({ movie }: MovieItemProps) => {
           <div className='add-movie-inputs'>
             <Input
               register={register}
-              // value={movie.title}
               error={errors}
               type={'text'}
               id={`title-${movie.id}`}
@@ -75,7 +85,6 @@ const ModalEdit = ({ movie }: MovieItemProps) => {
             />
             <Input
               register={register}
-              // value={movie.director}
               error={errors}
               type={'text'}
               id={`director-${movie.id}`}
@@ -84,18 +93,9 @@ const ModalEdit = ({ movie }: MovieItemProps) => {
             />
           </div>
           <div className='add-movie-inputs'>
+            <Input register={register} error={errors} type={'number'} id={`year-${movie.id}`} name='year' text='Year' />
             <Input
               register={register}
-              // value={movie.year}
-              error={errors}
-              type={'number'}
-              id={`year-${movie.id}`}
-              name='year'
-              text='Year'
-            />
-            <Input
-              register={register}
-              // value={movie.bannerUrl}
               error={errors}
               type={'text'}
               id={`bannerUrl-${movie.id}`}

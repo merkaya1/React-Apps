@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../Button/Button';
 import './MovieItem.styles.scss';
 import { useAppDispatch } from '../../redux/hook';
@@ -22,6 +22,9 @@ interface MovieItemProps {
 const MovieItem = ({ movie }: MovieItemProps) => {
   const dispatch = useAppDispatch();
 
+  const [dataMovie, setDataMovie] = useState(movie);
+
+  console.log(dataMovie, 'data');
   const notify = (title: string) =>
     toast(`${title} adlı film listenden kaldırıldı.`, {
       position: 'top-center',
@@ -59,7 +62,7 @@ const MovieItem = ({ movie }: MovieItemProps) => {
           <Button onclick={() => handleDeleteMovie(movie.id)} text='Delete' bg='delete' />
         </div>
       </div>
-      {movie.edit === true && <ModalEdit movie={movie} />}
+      {movie.edit === true && <ModalEdit movie={movie} dataMovie={dataMovie} setDataMovie={setDataMovie} />}
     </>
   );
 };
