@@ -13,19 +13,9 @@
   }
 
   ul {
-    @include d-flex(flex-start, flex-start);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
     gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-
-    li {
-      // max-width: 300px;
-      // min-width: 250px;
-      flex: 1;
-    }
-  }
-
-  @media screen and (max-width: 572px) {
-    padding: 1rem;
+    margin-top: 30px;
   }
 }

@@ -51,7 +51,9 @@ const MovieItem = ({ movie }: MovieItemProps) => {
   return (
     <>
       <div className='movie-item' data-key={movie.id}>
-        <img src={movie.bannerUrl} alt={movie.title} />
+        <div className='img-wrapper'>
+          <img src={movie.bannerUrl} alt={movie.title} />
+        </div>
         <div className='movie-item-info'>
           <h3 className='movie-item-info-title'>{movie.title}</h3>
           <p className='movie-item-info-directory'>{movie.director}</p>
